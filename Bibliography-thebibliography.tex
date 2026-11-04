@@ -1,0 +1,48 @@
+% Aim: Bibliography using thebibliography and citations in the body
+\documentclass[12pt]{article}
+
+\begin{document}
+
+\title{Books on Mathematics}
+\author{Student Name}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+My field of interest is Mathematics. While studying, I have used many books. For basic real analysis, the book by Bartle and Sherbert \cite{bartle} is very useful. For algebra, students often read Herstein \cite{herstein} and Gallian \cite{gallian}.
+
+\section{Other Books}
+For linear algebra, the book by Hoffman and Kunze \cite{hoffman} explains vector spaces clearly. A good book for calculus and analysis is by Rudin \cite{rudin}, though it is a bit tough for beginners.
+
+Many references can be cited together, for example \cite{bartle, rudin} are both books on analysis.
+
+\begin{thebibliography}{9}
+
+\bibitem{bartle}
+R. G. Bartle and D. R. Sherbert,
+\textit{Introduction to Real Analysis},
+4th Edition, Wiley, 2011.
+
+\bibitem{herstein}
+I. N. Herstein,
+\textit{Topics in Algebra},
+2nd Edition, Wiley, 1975.
+
+\bibitem{gallian}
+J. A. Gallian,
+\textit{Contemporary Abstract Algebra},
+9th Edition, Cengage Learning, 2016.
+
+\bibitem{hoffman}
+K. Hoffman and R. Kunze,
+\textit{Linear Algebra},
+2nd Edition, Prentice Hall, 1971.
+
+\bibitem{rudin}
+W. Rudin,
+\textit{Principles of Mathematical Analysis},
+3rd Edition, McGraw-Hill, 1976.
+
+\end{thebibliography}
+
+\end{document}

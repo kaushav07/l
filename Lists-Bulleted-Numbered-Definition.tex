@@ -1,0 +1,77 @@
+% Aim: Bulleted, numbered and definition lists; compact/customised lists; interrupting and resuming
+\documentclass[12pt]{article}
+\usepackage{enumitem}   % for customising lists
+
+\begin{document}
+
+\section*{Lists in \LaTeX{}}
+
+\subsection*{1. Bulleted list (itemize)}
+\begin{itemize}
+  \item Algebra
+  \item Calculus
+  \item Real Analysis
+\end{itemize}
+
+\subsection*{2. Numbered list (enumerate)}
+\begin{enumerate}
+  \item Open the editor
+  \item Write the code
+  \item Compile the file
+\end{enumerate}
+
+\subsection*{3. Definition list (description)}
+\begin{description}
+  \item[Group] A set with an operation satisfying closure, associativity, identity and inverse.
+  \item[Ring] A set with two operations, addition and multiplication.
+  \item[Field] A commutative ring in which every non-zero element has an inverse.
+\end{description}
+
+\subsection*{4. Compact list (spacing removed)}
+\begin{itemize}[noitemsep]
+  \item Matrices
+  \item Determinants
+  \item Vectors
+\end{itemize}
+
+\subsection*{5. Customised spacing}
+\begin{enumerate}[itemsep=10pt, topsep=5pt]
+  \item First item with extra space
+  \item Second item with extra space
+  \item Third item with extra space
+\end{enumerate}
+
+\subsection*{6. Customised labels}
+\begin{enumerate}[label=(\alph*)]
+  \item Sets
+  \item Relations
+  \item Functions
+\end{enumerate}
+
+\begin{itemize}[label=$\star$]
+  \item Star bullet one
+  \item Star bullet two
+\end{itemize}
+
+\subsection*{7. Nested list}
+\begin{enumerate}
+  \item Mathematics
+    \begin{itemize}
+      \item Pure
+      \item Applied
+    \end{itemize}
+  \item Computer Science
+\end{enumerate}
+
+\subsection*{8. Interrupting and resuming a list}
+\begin{enumerate}
+  \item First point
+  \item Second point
+\end{enumerate}
+This is a normal paragraph in between. The list is interrupted here and will be resumed below.
+\begin{enumerate}[resume]
+  \item Third point (numbering continues)
+  \item Fourth point
+\end{enumerate}
+
+\end{document}

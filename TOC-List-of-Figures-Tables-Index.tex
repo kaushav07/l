@@ -1,0 +1,60 @@
+% Aim: Table of contents, list of figures, list of tables, index
+\documentclass[12pt]{report}
+\usepackage{makeidx}
+\makeindex   % to create the index
+
+\begin{document}
+
+\title{My Report on \LaTeX{}}
+\author{Student Name}
+\date{\today}
+\maketitle
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter{Introduction}
+\section{What is \LaTeX{}?}
+\LaTeX{}\index{LaTeX} is a document preparation system. It is widely used for writing mathematical\index{Mathematics} documents.
+
+\section{Why use it?}
+It gives a very good quality output and handles equations\index{Equations} easily.
+
+\chapter{Figures and Tables}
+\section{A Figure}
+Figure \ref{fig:box} shows a simple figure.
+
+\begin{figure}[h]
+\centering
+\fbox{\parbox{4cm}{\centering This is a figure\index{Figure}}}
+\caption{A simple figure}
+\label{fig:box}
+\end{figure}
+
+\section{A Table}
+Table \ref{tab:data} shows some data.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+x & $x^2$ \\
+\hline
+1 & 1 \\
+2 & 4 \\
+3 & 9 \\
+\hline
+\end{tabular}
+\caption{Squares of numbers}
+\label{tab:data}
+\end{table}
+
+The table\index{Table} above lists squares of numbers.
+
+\chapter{Conclusion}
+In this practical, the table of contents, list of figures, list of tables and an index\index{Index} were generated.
+
+\printindex
+
+\end{document}

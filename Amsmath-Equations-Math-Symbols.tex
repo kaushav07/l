@@ -1,0 +1,75 @@
+% Aim: amsmath package, aligned and numbered equations, math symbols
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\section*{Mathematics in \LaTeX{}}
+
+\subsection*{1. Inline and display math}
+The quadratic formula is $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$ and it can also be displayed as
+\[
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\]
+
+\subsection*{2. Numbered equations}
+\begin{equation}
+a^2 + b^2 = c^2 \label{eq:pythagoras}
+\end{equation}
+Equation \eqref{eq:pythagoras} is the Pythagoras theorem.
+
+\subsection*{3. Aligned equations}
+\begin{align}
+(a+b)^2 &= a^2 + 2ab + b^2 \\
+(a-b)^2 &= a^2 - 2ab + b^2 \\
+a^2 - b^2 &= (a+b)(a-b)
+\end{align}
+
+Without numbers:
+\begin{align*}
+2x + 3 &= 11 \\
+2x &= 8 \\
+x &= 4
+\end{align*}
+
+\subsection*{4. Summation, product, integral, limit}
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\qquad
+\prod_{i=1}^{n} i = n!
+\]
+\[
+\int_{0}^{1} x^2 \, dx = \frac{1}{3}
+\qquad
+\lim_{x \to 0} \frac{\sin x}{x} = 1
+\]
+
+\subsection*{5. Matrix}
+\[
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+\qquad
+\det(A) = \begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix} = -2
+\]
+
+\subsection*{6. Piecewise function (cases)}
+\[
+|x| = \begin{cases}
+x & \text{if } x \geq 0 \\
+-x & \text{if } x < 0
+\end{cases}
+\]
+
+\subsection*{7. Various math symbols}
+\begin{itemize}
+  \item Number sets: $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$
+  \item Greek letters: $\alpha, \beta, \gamma, \delta, \theta, \lambda, \mu, \pi, \sigma, \omega$
+  \item Relations: $\leq, \geq, \neq, \approx, \equiv, \sim$
+  \item Logic and sets: $\forall, \exists, \in, \notin, \subseteq, \cup, \cap, \emptyset$
+  \item Arrows: $\rightarrow, \Rightarrow, \Leftrightarrow, \mapsto$
+\end{itemize}
+
+\subsection*{8. Fine-tuning spaces}
+Compare $\int f(x)dx$ with $\int f(x)\,dx$, and $a\;b$, $a\quad b$, $a\qquad b$.
+
+\end{document}

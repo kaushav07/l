@@ -1,0 +1,62 @@
+% Aim: Tables, caption, spanning rows and columns
+\documentclass[12pt]{article}
+\usepackage{multirow}   % for spanning rows
+
+\begin{document}
+
+\section*{Tables in \LaTeX{}}
+
+\subsection*{1. A simple table with caption}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Roll No. & Name & Marks \\
+\hline
+1 & Aman & 78 \\
+2 & Riya & 85 \\
+3 & Karan & 90 \\
+\hline
+\end{tabular}
+\caption{Marks of three students}
+\label{tab:marks}
+\end{table}
+
+Table \ref{tab:marks} shows the marks of the students.
+
+\subsection*{2. Spanning columns (multicolumn)}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Result of B.Sc. Mathematics} \\
+\hline
+Name & Paper 1 & Paper 2 & Paper 3 \\
+\hline
+Aman & 70 & 65 & 80 \\
+Riya & 88 & 79 & 91 \\
+\hline
+\end{tabular}
+\caption{Table with a spanning column}
+\end{table}
+
+\subsection*{3. Spanning rows (multirow)}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Class & Student & Grade \\
+\hline
+\multirow{2}{*}{Semester 5} & Aman & A \\
+\cline{2-3}
+ & Riya & A+ \\
+\hline
+\multirow{2}{*}{Semester 3} & Karan & B \\
+\cline{2-3}
+ & Neha & A \\
+\hline
+\end{tabular}
+\caption{Table with a spanning row}
+\end{table}
+
+\end{document}

@@ -1,0 +1,54 @@
+% Aim: Tables, captions, text in columns, spanning, packages to auto-fit columns
+\documentclass[12pt]{article}
+\usepackage{multirow}
+\usepackage{multicol}   % text in columns
+\usepackage{tabularx}   % auto-fit columns
+\usepackage{array}
+
+\begin{document}
+
+\section*{1. Text in columns}
+\begin{multicols}{2}
+This text is written in two columns using the multicol package. The text flows from the first column to the second column automatically. This is the way newspapers and research papers are printed. We can change the number of columns by changing the number in the command. Columns are useful when we have a lot of text to fit on a page.
+\end{multicols}
+
+\section*{2. Auto-fit column using tabularx}
+The table below fits exactly in the text width. The column marked X expands automatically.
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|c|}
+\hline
+\textbf{S.No.} & \textbf{Description} & \textbf{Marks} \\
+\hline
+1 & Definition of a group and its examples & 5 \\
+\hline
+2 & Statement and proof of Lagrange's theorem, including some applications to finite groups & 10 \\
+\hline
+3 & Short note on cyclic groups & 5 \\
+\hline
+\end{tabularx}
+\caption{Table with auto-fit column}
+\label{tab:auto}
+\end{table}
+
+\section*{3. Spanning rows and columns together}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multirow{2}{*}{Student} & \multicolumn{3}{c|}{Marks} \\
+\cline{2-4}
+ & Test 1 & Test 2 & Test 3 \\
+\hline
+Aman & 18 & 20 & 17 \\
+\hline
+Riya & 19 & 18 & 20 \\
+\hline
+\end{tabular}
+\caption{Table using multirow and multicolumn}
+\end{table}
+
+As seen in Table \ref{tab:auto}, the description column adjusts its width by itself.
+
+\end{document}
